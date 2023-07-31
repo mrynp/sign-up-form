@@ -67,3 +67,21 @@ input:valid {
   -webkit-appearance: none;
   margin: 0;
 }
+
+main {
+	display: flex;
+	align-items: center;
+}
+
+.image-container {
+	width: 40%;
+	height: 100%;
+}
+
+.dog-image {
+	height: 400px;
+}
+
+.form-container {
+	width: 60%;
+}
