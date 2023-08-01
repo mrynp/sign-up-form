@@ -13,10 +13,9 @@ body {
 }
 
 h1 {
-	font-size: 2.25rem;
+	font-size: 3.25rem;
 	font-weight: 700;
-	color: white;
-	text-align: center;
+	color: rgb(0, 0, 0);
 }
 
 
@@ -34,38 +33,34 @@ a:hover {
 	text-decoration: underline;
 }
 
-.small {
-	font-size: 80%;
-	text-align: center;
-}
 
 main {
 	display: flex;
 	flex-direction: column;
 }
 
-.image-container {
-	height: 200px;
-	background-color: bisque;
-}
 
-.image-container, .form-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .image-container {
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('happydog.jpg');
+	background-image: url('happydogs.jpg');
 	background-size: cover;
+	background-position: center center;
 }
 
-.image-container p {
-	/* justify-self: end; */
+.logo-credit {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
 }
+
+
 
 .form-container {
+	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-container .copy {
@@ -161,10 +156,29 @@ button:hover {
 		height: 100vh;
 	}
 
-	.image-container,
+	.image-container, 
 	.form-container {
 		display: flex;
 		width: 50%;
 		height: auto;
+	}
+
+}
+
+@media screen and (max-width: 899px) {
+	h1 {
+		align-items: center;
+		margin: 1.2em auto;
+		font-size: 2.5rem;
+	}
+
+	.image-container {
+		height: 30vh;
+		background-position: 100% 48%;
+	
+	}
+
+	.image-container p {
+		display: none;
 	}
 }
