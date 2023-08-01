@@ -16,8 +16,10 @@
 <main>
 
   <div class="image-container">
-    <section class="logo-credit"><h1>Happy Tails</h1>
-      Photo by <a href="https://unsplash.com/@alvannee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alvan Nee</a> on <a href="https://unsplash.com/photos/1VgfQdCuX-4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    <section class="logo-credit">
+    <h1>Happy Tails</h1>
+    <p>Photo by <a href="https://unsplash.com/@alvannee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alvan Nee</a> on <a href="https://unsplash.com/photos/1VgfQdCuX-4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    </section>
   </section>
   </div>
 
@@ -27,36 +29,43 @@
   <h3>Sign Up to receive updates about available pets near you</h3>
   </section>
 <form action="#" method="post">
-<div>
+
+<div class="form-grid">
+  
+<div class="row">
+<div class="column">
   <label for="first_name">First Name</label>
   <input type="text" name="first_name" id="first_name">
 </div>
 
-<div>
-  <label for="last_name">Last Name</label>
-  <input type="text" name="last_name" id="Last_name">
-</div>
-
-<div>
+<div class="column">
   <label for="phone_number">Phone Number</label>
   <input type="number" name="phone_number" id="phone_number" min="0">
 </div>
 
-<div>
+<div class="column input-password">
+  <label for="user_password">Password</label>
+  <input type="password" name="user_password" id="user_password" minlength="6" placeholder="Must be atleast 6 characters"><i class="fa fa-eye-slash"></i>
+</div>
+</div>
+
+<div class="row 2">
+<div class="column">
+  <label for="last_name">Last Name</label>
+  <input type="text" name="last_name" id="Last_name">
+</div>
+
+<div class="column">
   <label for="user_email">Email</label>
   <input type="email" name="user_email" id="user_email" placeholder="you@example.com">
 </div>
 
-<div class="input-password">
-  <label for="user_password">Password</label>
-  <input type="password" name="user_password" id="user_password" minlength="6" placeholder="Must be atleast 6 characters"><i class="fa fa-eye-slash"></i>
-</div>
-
-<div class="confirm-password">
+<div class="column confirm-password">
   <label for="confirm_password">Confirm Password</label>
   <input type="password" name="confirm_password" id="confirm_password">
 </div>
-
+</div>
+</div> 
 <button type="submit">Sign Up</button>
 </form>
 <p>Already have an account? <a href="#"><strong>Log In</strong></a></p>

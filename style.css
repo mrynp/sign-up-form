@@ -77,9 +77,19 @@ main {
 	font-size: 0.875rem;
 }
 
-.form-container form {
-	width: 328px;
+/* .form-container form {
+	width: 500px;
+} */
+
+.form-grid {
+	display: flex;
+	gap: 1.5em;
 }
+
+.column {
+	width: 200px;
+}
+
 
 form input[type="text"], 
 form input[type="number"], 
@@ -180,5 +190,15 @@ button:hover {
 
 	.image-container p {
 		display: none;
+	}
+
+	.form-grid {
+		flex-direction: column;
+		justify-content: center;
+		gap: 0;
+	}
+
+	.column {
+		width: 370px;
 	}
 }
