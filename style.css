@@ -1,52 +1,120 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
+:root {
 	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	--primary-blue: #233975;
 }
 
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+}
+
+
+h3 {
+	font-size: 1.5 rem;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-blue);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.small {
+	font-size: 80%;
+	text-align: center;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+.image-container {
+	height: 200px;
+	background-color: bisque;
+}
+
+.image-container, .form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-container {
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('happydog.jpg');
+	background-size: cover;
+}
+
+.image-container p {
+	/* justify-self: end; */
+}
+
+.form-container {
+	flex-direction: column;
+}
+
+.form-container .copy {
+	color: black;
+	text-align: center;
+}
+
+.form-container h3 {
+	margin: 1.5em 0;
+}
+
+.form-container p {
+	margin: 1.5em 0;
+	font-size: 0.875rem;
+}
+
+.form-container form {
+	width: 328px;
+}
+
+form input[type="text"], 
+form input[type="number"], 
+form input[type="email"], 
+form input[type="password"] {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 8px;
+	border: 1px solid #c4c4c4;
+	padding: 1em;
+	margin-bottom: 1.25rem;
+	font-size: 0.875rem;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5 rem;
+	font-size: 0.75rem;
+}
+
+.input-password {
+	position: relative;
+}
+
+.input-password i {
+	position: absolute;
+	top: 32px;
+	right: 16px;
+}
 
 input:invalid {
 	border-color: red;
@@ -68,20 +136,35 @@ input:valid {
   margin: 0;
 }
 
-main {
-	display: flex;
-	align-items: center;
+button {
+	display: block;
+	width: 100%;
+	background-color: var(--primary-blue);
+	color: white;
+	font-weight: 700;
+	border: none;
+	padding: 1rem;
+	border-radius: 8px;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
-.image-container {
-	width: 40%;
-	height: 100%;
+button:hover {
+	background: #2c4893;
+	cursor: pointer;
 }
 
-.dog-image {
-	height: 400px;
-}
+@media screen and (min-width: 900px) {
+	main {
+		flex-direction: row;
+		height: 100vh;
+	}
 
-.form-container {
-	width: 60%;
+	.image-container,
+	.form-container {
+		display: flex;
+		width: 50%;
+		height: auto;
+	}
 }
