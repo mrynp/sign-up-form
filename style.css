@@ -4,12 +4,17 @@
 	line-height: 1.5;
 }
 
+*:focus {
+	outline: none;
+}
+
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Mandali', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
-	background-color: #a5b581;
+	background: linear-gradient(45deg, #c7d7a4, #a5b581);
 	color: #eaecf3;
 }
 
@@ -79,11 +84,13 @@ main {
 	color: black;
 	text-align: center;
 	flex: 1;
+	width: 35em;
+	margin: 1.5em;
 }
 
 
 .form-container p {
-	/* margin: 1.5em 0; */
+	margin: 1.5em;
 	font-size: 0.875rem;
 }
 
@@ -95,7 +102,7 @@ main {
 
 form {
 	flex: 2;
-	margin: 0 1.5em;
+	margin: 1.5em;
 }
 
 .column {
@@ -103,22 +110,29 @@ form {
 }
 
 
-form input[type="text"], 
-form input[type="number"], 
-form input[type="email"], 
-form input[type="password"] {
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"] {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 8px;
-	border: 0px solid #5c3c3c;
+	border: none;
+	transition: 0.5s;
 	padding: 1em;
 	margin-bottom: 1.25rem;
 	font-size: 0.875rem;
 	background-color: #cbdbaa;
 	color: #6d5953;
 	font-family: 'Mandali', sans-serif;
-	
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus {
+	background: #dce0d3;
 }
 
 label {
@@ -165,11 +179,13 @@ button {
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin: 1em auto;
+	transition: 0.5s;
 }
 
 
+
 button:hover {
-	background: #cbdbaa;
+	background:#d0dabc;
 	cursor: pointer;
 }
 
