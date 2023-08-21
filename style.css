@@ -78,13 +78,13 @@ main {
 	justify-content: center;
 	align-items: center;
 	flex: 1.25;
+	width: 600px;
 }
 
 .form-container .copy {
 	color: black;
 	text-align: center;
 	flex: 1;
-	width: 35em;
 	margin: 1.5em;
 }
 
@@ -95,20 +95,14 @@ main {
 }
 
 
+
+
 .form-grid {
-	display: flex;
-	gap: 1.5em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	width: 500px;
 }
-
-form {
-	flex: 2;
-	margin: 1.5em;
-}
-
-.column {
-	width: 220px;
-}
-
 
 input[type="text"], 
 input[type="number"], 
@@ -137,7 +131,7 @@ input[type="password"]:focus {
 
 label {
 	display: block;
-	margin-bottom: 1 rem;
+	margin-bottom: 6px;
 	font-size: 0.85rem;
 	color: #5b673e;
 }
@@ -166,7 +160,7 @@ label {
   margin: 0;
 }
 
-button {
+.button {
 	display: block;
 	width: 40%;
 	background-color: transparent;
@@ -184,7 +178,7 @@ button {
 
 
 
-button:hover {
+.button:hover {
 	background:#d0dabc;
 	cursor: pointer;
 }
@@ -225,9 +219,7 @@ button:hover {
 	}
 
 	.form-grid {
-		flex-direction: column;
-		justify-content: center;
-		gap: 0;
+		grid-template-columns: 1fr;
 	}
 
 	.column {
