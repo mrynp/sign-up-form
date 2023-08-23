@@ -78,14 +78,13 @@ main {
 	justify-content: center;
 	align-items: center;
 	flex: 1.25;
-	width: 600px;
 }
 
 .form-container .copy {
 	color: black;
 	text-align: center;
-	flex: 1;
 	margin: 1.5em;
+	min-width: 500px;
 }
 
 
@@ -95,19 +94,18 @@ main {
 }
 
 
-
-
 .form-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+	column-gap: 20px;
 	width: 500px;
 }
 
-input[type="text"], 
-input[type="number"], 
-input[type="email"], 
-input[type="password"] {
+.input-control {
+	height: 100px;
+}
+
+.input-control input {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -122,11 +120,23 @@ input[type="password"] {
 	font-family: 'Mandali', sans-serif;
 }
 
-input[type="text"]:focus, 
-input[type="number"]:focus, 
-input[type="email"]:focus, 
-input[type="password"]:focus {
+.input-control input:focus {
 	background: #dce0d3;
+}
+
+.input-control.success input {
+	border: 1px solid #93a46b;
+}
+
+.input-control.error input {
+	border: 1px solid #a46b6b;
+}
+
+.input-control .error {
+	color: #a46b6b;
+	font-size: 9px;
+	position: relative;
+	top: -15px;
 }
 
 label {
@@ -136,26 +146,15 @@ label {
 	color: #5b673e;
 }
 
-.input-password {
-	position: relative;
-}
 
-.input-password i {
-	position: absolute;
-	top: 39px;
-	right: 16px;
-	color: #6d5953;
-}
-
-
-#phone_number {
+#number {
   -moz-appearance: textfield;
 }
-#phone_number::-webkit-inner-spin-button {
+#number::-webkit-inner-spin-button {
   display: none;
 }
-#phone_number::-webkit-outer-spin-button,
-#phone_number::-webkit-inner-spin-button {
+#number::-webkit-outer-spin-button,
+#number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -220,9 +219,13 @@ label {
 
 	.form-grid {
 		grid-template-columns: 1fr;
-	}
-
-	.column {
 		width: 370px;
 	}
+
+	.form-container p {
+		margin: 1.5em;
+		font-size: 0.65rem;
+	}
 }
+
+
